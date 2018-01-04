@@ -5,11 +5,18 @@
         <UserSecretsId>aspnet-adminlte_ngnetcore-503292B3-C7BA-4D98-9293-DB72D942AEB4</UserSecretsId>
         <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
         <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
+        <AssemblyName>adminlte_ngnetcore</AssemblyName>
+        <RootNamespace>adminlte_ngnetcore</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\cert.pfx" />
+    </ItemGroup>
 
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.WsFederation" Version="2.0.0-preview2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" PrivateAssets="All" />
     </ItemGroup>
@@ -21,7 +28,15 @@
     </ItemGroup>
 
     <ItemGroup>
+      <EmbeddedResource Include="Resources\cert.pfx">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
       <Folder Include="Client\" />
     </ItemGroup>
+
+    <ProjectExtensions><VisualStudio><UserProperties bundleconfig_1json__JSONSchema="http://json.schemastore.org/bundleconfig" appsettings_1json__JSONSchema="http://json.schemastore.org/appsettings" /></VisualStudio></ProjectExtensions>
 
 </Project>

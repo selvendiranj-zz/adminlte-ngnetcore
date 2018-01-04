@@ -10,16 +10,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using AspNetCoreAdfs.Models;
-using AspNetCoreAdfs.Models.AccountViewModels;
-using AspNetCoreAdfs.Services;
+using adminlte_ngnetcore.Models;
+using adminlte_ngnetcore.Models.AccountViewModels;
+using adminlte_ngnetcore.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Authentication.WsFederation;
 using Microsoft.AspNetCore.Http;
 using System.Text.Encodings.Web;
 
-namespace AspNetCoreAdfs.Controllers
+namespace adminlte_ngnetcore.Controllers
 {
     [Route("[controller]/[action]")]
     public class AccountController : Controller

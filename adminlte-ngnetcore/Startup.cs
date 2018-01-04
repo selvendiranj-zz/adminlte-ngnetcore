@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using AspNetCoreAdfs.Data;
-using AspNetCoreAdfs.Models;
-using AspNetCoreAdfs.Services;
+using adminlte_ngnetcore.Data;
+using adminlte_ngnetcore.Models;
+using adminlte_ngnetcore.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Logging;
@@ -20,7 +20,7 @@ using Microsoft.AspNetCore.Authentication.WsFederation;
 using Microsoft.AspNetCore.Http;
 using System.Text.Encodings.Web;
 
-namespace AspNetCoreAdfs
+namespace adminlte_ngnetcore
 {
     public class Startup
     {

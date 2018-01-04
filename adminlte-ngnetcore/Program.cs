@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,7 +12,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Reflection;
 using Microsoft.Extensions.FileProviders;
 
-namespace AspNetCoreAdfs
+namespace adminlte_ngnetcore
 {
     public class Program
     {
@@ -49,8 +49,8 @@ namespace AspNetCoreAdfs
         private static X509Certificate2 LoadCertificate()
         {
             var assembly = typeof(Startup).GetTypeInfo().Assembly;
-            var embeddedFileProvider = new EmbeddedFileProvider(assembly, "AspNetCoreAdfs");
-            var certificateFileInfo = embeddedFileProvider.GetFileInfo("resources/cert.pfx");
+            var embeddedFileProvider = new EmbeddedFileProvider(assembly, "adminlte_ngnetcore");
+            var certificateFileInfo = embeddedFileProvider.GetFileInfo("Resources/cert.pfx");
             using (var certificateStream = certificateFileInfo.CreateReadStream())
             {
                 byte[] certificatePayload;
